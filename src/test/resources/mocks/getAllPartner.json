@@ -1,0 +1,46 @@
+[
+  {
+    "id": "7542cf35-4139-4af8-a57d-65e073ed6a21",
+    "partnerOrgName": "test",
+    "theatreDetails": [
+      {
+        "theatreName": "testTheatre",
+        "city": "Bangalore",
+        "screeningMovie": [
+          {
+            "screeningStartDate": "2022-10-20",
+            "screeningEndDate": "2022-11-20",
+            "languages": [
+              "English",
+              "Hindi"
+            ],
+            "movieName": "ABC",
+            "showTimings": [
+              "22:30:00",
+              "18:30:00",
+              "10:00:00",
+              "14:30:00"
+            ]
+          }
+        ],
+        "seatingCategory": {
+          "seatingCategoryMap": {
+            "Economy": {
+              "numberOfSeats": 10,
+              "price": 10
+            },
+            "Premium Economy": {
+              "numberOfSeats": 100,
+              "price": 100
+            },
+            "Premium": {
+              "numberOfSeats": 20,
+              "price": 200
+            }
+          },
+          "numberOfSeats": 0
+        }
+      }
+    ]
+  }
+]

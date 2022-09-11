@@ -1,0 +1,32 @@
+server:
+  port: 9090
+  servlet:
+      contextPath: /bookmyshow
+
+spring:
+  applicaion:
+    name: 'Book My Show'
+  redis:
+    url: redis://default:S58q28CRpEXCKkKgTdgt1BG6j4XH4L60@redis-12769.c212.ap-south-1-1.ec2.cloud.redislabs.com:12769
+
+management:
+  server:
+    port: 9090
+  endpoints:
+    enabled-by-default: false
+    web:
+      base-path: /manage
+  endpoint:
+    health:
+      enabled: true
+      probes:
+        enabled: true
+
+bookmyshow-configuration:
+  redisConfig:
+    url: redis-12769.c212.ap-south-1-1.ec2.cloud.redislabs.com
+    port: 12769
+    secret: S58q28CRpEXCKkKgTdgt1BG6j4XH4L60
+  corsConfiguration:
+    whitelistURLs:
+      - http://localhost:9090/
