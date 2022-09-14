@@ -1,4 +1,4 @@
-#BookMyShow
+# BookMyShow
 This repository is created as part of demo app for a tech interview
 
 ### Getting Started
