@@ -7,7 +7,6 @@ import org.slf4j.MDC;
 import java.util.Optional;
 import java.util.UUID;
 
-
 public class BuddyController {
     Logger log = LoggerFactory.getLogger("jsonLogger");
 

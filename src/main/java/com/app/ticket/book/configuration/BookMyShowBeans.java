@@ -1,15 +1,19 @@
 package com.app.ticket.book.configuration;
 
+import com.app.ticket.book.aspects.MDCTaskDecorator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.task.TaskDecorator;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.List;
 
 @Configuration
+@EnableAsync
 public class BookMyShowBeans {
 
     @Autowired BookMyShowProperties properties;
@@ -35,6 +39,11 @@ public class BookMyShowBeans {
                         .allowedOrigins(whitelistURLs.toArray(new String[whitelistURLs.size()]));
             }
         };
+    }
+
+    @Bean
+    TaskDecorator mdcCopyTaskDecorator() {
+        return new MDCTaskDecorator();
     }
 
 }
