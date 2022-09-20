@@ -56,3 +56,7 @@ There is a separate controller for B2B and B2C features
 A sample test is written using SpringBootTest and Auto configured mock mvc. 
 The repository is mocked.
 
+### Logs
+- JSON log format: this is suitable for searching parameters in ELK/ELS stack
+- Asynchronous logging
+- method and overall duration captured through aspects
