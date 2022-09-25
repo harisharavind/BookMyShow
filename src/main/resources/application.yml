@@ -24,9 +24,9 @@ management:
 
 bookmyshow-configuration:
   redisConfig:
-    url: redis-12769.c212.ap-south-1-1.ec2.cloud.redislabs.com
+    url: cmVkaXMtMTI3NjkuYzIxMi5hcC1zb3V0aC0xLTEuZWMyLmNsb3VkLnJlZGlzbGFicy5jb20=
     port: 12769
-    secret: S58q28CRpEXCKkKgTdgt1BG6j4XH4L60
+    secret: UzU4cTI4Q1JwRVhDS2tLZ1RkZ3QxQkc2ajRYSDRMNjA=
   corsConfiguration:
     whitelistURLs:
       - http://localhost:9090/

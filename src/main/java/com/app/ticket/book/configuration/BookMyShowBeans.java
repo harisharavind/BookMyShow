@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import java.util.Base64;
 import java.util.List;
 
 @Configuration
@@ -22,9 +23,9 @@ public class BookMyShowBeans {
     JedisConnectionFactory jedisConnectionFactory() {
         JedisConnectionFactory jedisConFactory
                 = new JedisConnectionFactory();
-        jedisConFactory.setHostName(properties.getRedisConfig().getUrl());
+        jedisConFactory.setHostName(new String(Base64.getDecoder().decode(properties.getRedisConfig().getUrl())));
         jedisConFactory.setPort(properties.getRedisConfig().getPort());
-        jedisConFactory.setPassword(properties.getRedisConfig().getSecret());
+        jedisConFactory.setPassword(new String(Base64.getDecoder().decode(properties.getRedisConfig().getSecret())));
         return jedisConFactory;
     }
 
