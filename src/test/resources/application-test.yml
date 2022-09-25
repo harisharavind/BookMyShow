@@ -6,8 +6,6 @@ server:
 spring:
   applicaion:
     name: 'Book My Show'
-  redis:
-    url: redis://default:S58q28CRpEXCKkKgTdgt1BG6j4XH4L60@redis-12769.c212.ap-south-1-1.ec2.cloud.redislabs.com:12769
 
 management:
   server:
